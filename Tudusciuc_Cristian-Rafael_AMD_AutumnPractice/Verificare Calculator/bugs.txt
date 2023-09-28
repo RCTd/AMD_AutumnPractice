@@ -1,0 +1,9 @@
+ 	Bug de design: -la reset bit-ul 0 din registrul de stare nu se reseteaza (un if reset ca solutie)
+				   -la reset registrul si counter-ul sunt setate cu valori eronate (schimbarea valorilor)
+                   -nu se poate trece in alt mode fara reset (schimbarea logicii pentru state[6], eliminare a partii |state[6])
+                  
+                   -cheia nu este salvata in registru, se poate activa la momente gresite (stari de salvare a cheii in registru urmate de o verificare)
+                  
+	Bug de specificatie: -frecventa nu se poate modifica dupa activare (negarea intrarii enable)
+                  
+   	Bug de verif: -parametrii modulului de memorie nu pot fi modificati din test (adaugarea parametrilor la modulul top)
